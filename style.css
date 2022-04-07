@@ -1,0 +1,19 @@
+.NF-trailer-tooltip {
+    position: absolute;
+    top: -5rem;
+    padding: 0.6rem 1.6rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: rgb(24, 24, 24);
+    background-color: rgb(230, 230, 230);
+    border-radius: 0.3rem;
+    box-shadow: rgb(0 0 0 / 75%) 0px 3px 1rem;
+    box-sizing: border-box;
+    z-index: 1;
+    pointer-events: none;
+    display: none;
+}
+
+.trailer-button:hover .NF-trailer-tooltip {
+    display: block;
+}
