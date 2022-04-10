@@ -17,3 +17,26 @@
 .trailer-button:hover .NF-trailer-tooltip {
     display: block;
 }
+
+.trailer-button {
+    z-index: 999;
+    min-width: 42px!important;
+    border-color: #fff;
+    background-color: #2a2a2a;
+    -webkit-box-align: center;
+    align-items: center;
+    appearance: none;
+    cursor: pointer;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    opacity: 1;
+    padding: 0.8rem;
+    position: relative;
+    user-select: none;
+    will-change: background-color, color;
+    word-break: break-word;
+    white-space: nowrap;
+    border-radius: 50%;
+    border: 2px solid rgb(255, 255, 255);
+}
