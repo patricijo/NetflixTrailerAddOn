@@ -10,19 +10,11 @@ const tooltip = '<div class="NF-trailer-tooltip">Trailer</div>';
 var focusTrapObserver = new MutationObserver(function (mutations) {
   mutations.forEach(function (mutation) {
     if (mutation.addedNodes.length) {
-      if (
-        mutation.addedNodes[0]
-          .querySelector("div")
-          .classList.contains("mini-modal")
-      ) {
+      if (mutation.addedNodes[0].classList.contains("mini-modal")) {
         addButtonToPreview();
       }
 
-      if (
-        mutation.addedNodes[0]
-          .querySelector("div")
-          .classList.contains("detail-modal")
-      ) {
+      if (mutation.addedNodes[0].classList.contains("detail-modal")) {
         addButtonToDetail();
       }
     }
@@ -61,11 +53,11 @@ const addButtonToPreview = () => {
     .insertAdjacentHTML("afterend", trailerBtn);
 
   //adding the button when the modal-mini transforms to modal-detail
-  item.querySelector(".mini-modal-container").onclick = function () {
+  /*   item.querySelector(".mini-modal-container").onclick = function () {
     setTimeout(function () {
       addButtonToDetail();
     }, 500);
-  };
+  }; */
 };
 
 ////////////////////////
