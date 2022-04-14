@@ -7,7 +7,7 @@ const tooltip = '<div class="NF-trailer-tooltip">Trailer</div>';
 //// OBSERVER
 ////////////////////////
 
-var observer = new MutationObserver(function (mutations) {
+var focusTrapObserver = new MutationObserver(function (mutations) {
   mutations.forEach(function (mutation) {
     if (mutation.addedNodes.length) {
       if (
@@ -29,9 +29,11 @@ var observer = new MutationObserver(function (mutations) {
   });
 });
 
-var wrapper = document.querySelector('[dir="ltr"]').querySelector("div");
-observer.observe(wrapper, {
+var focusTrapWrapper = document.querySelector('[dir="ltr"]');
+
+focusTrapObserver.observe(focusTrapWrapper, {
   childList: true,
+  subtree: true,
 });
 
 ////////////////////////
